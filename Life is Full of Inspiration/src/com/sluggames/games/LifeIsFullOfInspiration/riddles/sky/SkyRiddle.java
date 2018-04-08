@@ -67,19 +67,18 @@ public class SkyRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "Long ago, humans thought it was empty,",
-	    "Void of particular matter.",
-	    "But try living and breathing without it,",
-	    "Then tell me if it matters.",
-	    "Aside from the fact that it keeps us alive,",
-	    "Filling our lungs as its duty,",
-	    "Its great expanse can certainly be",
-	    "A picture of unmatched beauty."
-	};
+	public static final String LINES =
+	    "Long ago, humans thought it was empty,\n" +
+	    "Void of particular matter.\n" +
+	    "But try living and breathing without it,\n" +
+	    "Then tell me if it matters.\n" +
+	    "Aside from the fact that it keeps us alive,\n" +
+	    "Filling our lungs as its duty,\n" +
+	    "Its great expanse can certainly be\n" +
+	    "A picture of unmatched beauty.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

@@ -25,6 +25,7 @@ package com.sluggames.games.LifeIsFullOfInspiration.views.CreditsView;
 
 import com.sluggames.games.LifeIsFullOfInspiration.LifeIsFullOfInspiration;
 import com.sluggames.games.LifeIsFullOfInspiration.views.MainMenuView.MainMenuViewManager;
+import com.sluggames.games.LifeIsFullOfInspiration.views.SettingsView.SettingsViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -47,6 +48,12 @@ public class CreditsViewController {
 	    "\nDeveloped by Slug Games." +
 	    "\n\n\n" +
 	    "Programming:\n" +
+	    "\nDavid Boeger" +
+	    "\n\n\n" +
+	    "Voice:\n" +
+	    "\nDavid Boeger" +
+	    "\n\n\n" +
+	    "Sound Effects:\n" +
 	    "\nDavid Boeger" +
 	    "\n\n\n" +
 	    "Photography:\n" +
@@ -105,6 +112,7 @@ public class CreditsViewController {
 			/*
 			If the main menu view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (mainMenuViewManager != null) {
 				mainMenuViewManager.show();
 			}

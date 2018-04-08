@@ -45,7 +45,7 @@ public interface Riddle {
 		*** LINES ***
 		*************
 	*/
-	public String[] getLines();
+	public String getText();
 
 	/*
 		*************

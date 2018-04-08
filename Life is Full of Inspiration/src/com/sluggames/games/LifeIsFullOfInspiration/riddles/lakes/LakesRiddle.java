@@ -83,15 +83,14 @@ public class LakesRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "These bodies of water can be so great,",
-	    "They can even contain monsters, they say.",
-	    "They're not a bad place to visit,",
-	    "If you live where the oceans are far away."
-	};
+	public static final String LINES =
+	    "These bodies of water can be so great,\n" +
+	    "They can even contain monsters, they say.\n" +
+	    "They're not a bad place to visit,\n" +
+	    "If you live where the oceans are far away.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

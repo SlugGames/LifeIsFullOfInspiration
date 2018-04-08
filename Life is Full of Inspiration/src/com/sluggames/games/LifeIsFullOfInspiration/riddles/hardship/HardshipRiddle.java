@@ -85,19 +85,18 @@ public class HardshipRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "Nothing worth fighting for is easy.",
-	    "The best things in life aren't free.",
-	    "Life is a journey, not a destination.",
-	    "To embrace this is to simply be.",
-	    "When times are tough, when money is tight,",
-	    "When quick doth approach your next deadline,",
-	    "Remember those who have it worse,",
-	    "And realize this is not a curse."
-	};
+	public static final String LINES =
+	    "Nothing worth fighting for is easy.\n" +
+	    "The best things in life aren't free.\n" +
+	    "Life is a journey, not a destination.\n" +
+	    "To embrace this is to simply be.\n" +
+	    "When times are tough, when money is tight,\n" +
+	    "When quick doth approach your next deadline,\n" +
+	    "Remember those who have it worse,\n" +
+	    "And realize this is not a curse.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

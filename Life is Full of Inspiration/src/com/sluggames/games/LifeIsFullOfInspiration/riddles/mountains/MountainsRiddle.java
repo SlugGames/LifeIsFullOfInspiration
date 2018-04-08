@@ -85,15 +85,14 @@ public class MountainsRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "Welcome to the home of rock climbers,",
-	    "Amazing views, elevation, and hikers.",
-	    "There's little more spectacular than these rock formations,",
-	    "Formed by erosion across the ages."
-	};
+	public static final String LINES =
+	    "Welcome to the home of rock climbers,\n" +
+	    "Amazing views, elevation, and hikers.\n" +
+	    "There's little more spectacular than these rock formations,\n" +
+	    "Formed by erosion across the ages.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

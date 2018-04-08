@@ -95,15 +95,14 @@ public class ValleysRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "Across the imposing mountain range,",
-	    "Deep in the precipice you will find,",
-	    "A low-lying area filled with wonder,",
-	    "A capsule containing the passage of time."
-	};
+	public static final String LINES =
+	    "Across the imposing mountain range,\n" +
+	    "Deep in the precipice you will find,\n" +
+	    "A low-lying area filled with wonder,\n" +
+	    "A capsule containing the passage of time.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

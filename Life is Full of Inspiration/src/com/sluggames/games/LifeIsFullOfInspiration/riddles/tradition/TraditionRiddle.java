@@ -76,19 +76,18 @@ public class TraditionRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "Some may scoff and say it's not right,",
-	    "Calling it the antithesis of progress.",
-	    "But I believe that there can be value",
-	    "In examining this, I must confess.",
-	    "For if we were perfect in the present moment,",
-	    "Then how could we justify change?",
-	    "When looking at the history of our ancestor's behaviors,",
-	    "Some of them might well appear quite strange."
-	};
+	public static final String LINES =
+	    "Some may scoff and say it's not right,\n" +
+	    "Calling it the antithesis of progress.\n" +
+	    "But I believe that there can be value\n" +
+	    "In examining this, I must confess.\n" +
+	    "For if we were perfect in the present moment,\n" +
+	    "Then how could we justify change?\n" +
+	    "When looking at the history of our ancestor's behaviors,\n" +
+	    "Some of them might well appear quite strange.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

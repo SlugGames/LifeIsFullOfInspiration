@@ -77,19 +77,18 @@ public class FlowersRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "A time-honored gift between lovers each year,",
-	    "Touched by the dew like a cheek by a tear.",
-	    "Through seasons of rain, we persevere,",
-	    "Until the skies again become clear.",
-	    "Then do we see them in all of their glory,",
-	    "A moment in time which tells a whole story,",
-	    "From humble beginnings as a seed",
-	    "To beauty much more magnificent indeed."
-	};
+	public static final String LINES =
+	    "A time-honored gift between lovers each year,\n" +
+	    "Touched by the dew like a cheek by a tear.\n" +
+	    "Through seasons of rain, we persevere,\n" +
+	    "Until the skies again become clear.\n" +
+	    "Then do we see them in all of their glory,\n" +
+	    "A moment in time which tells a whole story,\n" +
+	    "From humble beginnings as a seed\n" +
+	    "To beauty much more magnificent indeed.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

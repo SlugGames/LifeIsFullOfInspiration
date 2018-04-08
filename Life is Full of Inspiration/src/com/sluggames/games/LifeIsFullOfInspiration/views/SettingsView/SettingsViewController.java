@@ -34,6 +34,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.input.KeyCombination;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Stage;
@@ -92,6 +93,7 @@ public class SettingsViewController {
 			/*
 			Set the game stage's full screen properties accordingly.
 			*/
+			buttonPress.play();
 			if (selectedNewValue) {
 				gameStage.setFullScreenExitHint("");
 				gameStage.setFullScreenExitKeyCombination(
@@ -157,6 +159,36 @@ public class SettingsViewController {
 	private Slider soundEffectsVolumeSlider;
 	@FXML
 	private Label soundEffectsVolumeSliderLabel;
+	public static AudioClip buttonPress = new AudioClip(
+	    SettingsViewController.class.getResource(
+	    "/com/sluggames/games/LifeIsFullOfInspiration/audio/Button Press.m4a"
+	    ).toString()
+	);
+	public static AudioClip correct = new AudioClip(
+	    SettingsViewController.class.getResource(
+	    "/com/sluggames/games/LifeIsFullOfInspiration/audio/Correct.m4a"
+	    ).toString()
+	);
+	public static AudioClip greatGuess = new AudioClip(
+	    SettingsViewController.class.getResource(
+	    "/com/sluggames/games/LifeIsFullOfInspiration/audio/Great Guess.m4a"
+	    ).toString()
+	);
+	public static AudioClip incorrect = new AudioClip(
+	    SettingsViewController.class.getResource(
+	    "/com/sluggames/games/LifeIsFullOfInspiration/audio/Incorrect.m4a"
+	    ).toString()
+	);
+	public static AudioClip notQuite = new AudioClip(
+	    SettingsViewController.class.getResource(
+	    "/com/sluggames/games/LifeIsFullOfInspiration/audio/Not Quite.m4a"
+	    ).toString()
+	);
+	public static AudioClip thanksForPlaying = new AudioClip(
+	    SettingsViewController.class.getResource(
+	    "/com/sluggames/games/LifeIsFullOfInspiration/audio/Thanks for Playing.m4a"
+	    ).toString()
+	);
 
 	private void initializeSoundEffectsVolumeSlider() {
 		/*
@@ -167,6 +199,29 @@ public class SettingsViewController {
 		);
 		soundEffectsVolumeSlider.setLabelFormatter(
 		    new DoubleToPercentageLabelConverter()
+		);
+
+		/*
+		Bind the audio clip volumes to the sound effects volume slider's
+		value property.
+		*/
+		buttonPress.volumeProperty().bind(
+		    soundEffectsVolumeSlider.valueProperty()
+		);
+		correct.volumeProperty().bind(
+		    soundEffectsVolumeSlider.valueProperty()
+		);
+		greatGuess.volumeProperty().bind(
+		    soundEffectsVolumeSlider.valueProperty()
+		);
+		incorrect.volumeProperty().bind(
+		    soundEffectsVolumeSlider.valueProperty()
+		);
+		notQuite.volumeProperty().bind(
+		    soundEffectsVolumeSlider.valueProperty()
+		);
+		thanksForPlaying.volumeProperty().bind(
+		    soundEffectsVolumeSlider.valueProperty()
 		);
 	}
 
@@ -194,6 +249,7 @@ public class SettingsViewController {
 			/*
 			If the main menu view manager is set, show it.
 			*/
+			buttonPress.play();
 			if (mainMenuViewManager != null) {
 				mainMenuViewManager.show();
 			}

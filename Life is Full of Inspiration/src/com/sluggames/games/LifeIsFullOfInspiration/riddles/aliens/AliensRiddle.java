@@ -67,19 +67,18 @@ public class AliensRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "In tales, they come as mighty foes,",
-	    "To rule the Earth in terror.",
-	    "For all we know, their bold attack",
-	    "May just be but an error.",
-	    "Through space and time, they gaze upon",
-	    "Their neighbors amongst the stars.",
-	    "All we really know today,",
-	    "They're probably not from Mars."
-	};
+	public static final String LINES =
+	    "In tales, they come as mighty foes,\n" +
+	    "To rule the Earth in terror.\n" +
+	    "For all we know, their bold attack\n" +
+	    "May just be but an error.\n" +
+	    "Through space and time, they gaze upon\n" +
+	    "Their neighbors amongst the stars.\n" +
+	    "All we really know today,\n" +
+	    "They're probably not from Mars.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

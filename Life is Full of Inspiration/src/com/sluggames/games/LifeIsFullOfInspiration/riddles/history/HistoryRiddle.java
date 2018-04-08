@@ -68,15 +68,14 @@ public class HistoryRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "They say to move forward, you must look back,",
-	    "Know where you're from to know where you're at.",
-	    "You see it in movies, you see it in shows,",
-	    "But how much of it does anyone really know?"
-	};
+	public static final String LINES =
+	    "They say to move forward, you must look back,\n" +
+	    "Know where you're from to know where you're at.\n" +
+	    "You see it in movies, you see it in shows,\n" +
+	    "But how much of it does anyone really know?";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

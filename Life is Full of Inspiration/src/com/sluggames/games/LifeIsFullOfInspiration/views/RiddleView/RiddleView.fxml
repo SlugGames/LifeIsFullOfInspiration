@@ -11,6 +11,8 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
 <fx:root fx:id="rootStackPane" type="StackPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
@@ -25,10 +27,10 @@
         </columnConstraints>
         <rowConstraints>
             <RowConstraints percentHeight="10.0" />
-          <RowConstraints percentHeight="70.0" valignment="CENTER" />
+          <RowConstraints percentHeight="60.0" />
             <RowConstraints percentHeight="10.0" />
-          <RowConstraints percentHeight="5.0" />
-            <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" valignment="TOP" />
+          <RowConstraints percentHeight="10.0" />
+            <RowConstraints percentHeight="10.0" />
         </rowConstraints>
          <padding>
             <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
@@ -37,10 +39,17 @@
             <TextField fx:id="solveHereTextField" alignment="CENTER" promptText="Solve Here" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <ScrollPane fx:id="riddleTextFlowScrollPane" fitToWidth="true" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
                <content>
-                  <TextFlow fx:id="riddleTextFlow" lineSpacing="1.5" textAlignment="CENTER">
+                  <TextFlow fx:id="riddleTextFlow" lineSpacing="3.0" textAlignment="CENTER">
                      <padding>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </padding>
+                     <children>
+                        <Text fx:id="riddleText" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER">
+                           <font>
+                              <Font name="Georgia Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
                   </TextFlow>
                </content>
                <opaqueInsets>
@@ -65,8 +74,8 @@
           <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
         </columnConstraints>
         <rowConstraints>
-          <RowConstraints percentHeight="95.0" />
-          <RowConstraints percentHeight="5.0" />
+          <RowConstraints percentHeight="90.0" />
+          <RowConstraints percentHeight="10.0" />
         </rowConstraints>
          <children>
             <Button fx:id="backButton" mnemonicParsing="false" text="Back" GridPane.rowIndex="1" />

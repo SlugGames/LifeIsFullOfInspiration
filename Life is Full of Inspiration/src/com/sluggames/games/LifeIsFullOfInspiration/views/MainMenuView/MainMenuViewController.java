@@ -27,6 +27,7 @@ import com.sluggames.games.LifeIsFullOfInspiration.views.CreditsView.CreditsView
 import com.sluggames.games.LifeIsFullOfInspiration.views.LicenseView.LicenseViewManager;
 import com.sluggames.games.LifeIsFullOfInspiration.LifeIsFullOfInspiration;
 import com.sluggames.games.LifeIsFullOfInspiration.views.SelectionView.SelectionViewManager;
+import com.sluggames.games.LifeIsFullOfInspiration.views.SettingsView.SettingsViewController;
 import com.sluggames.games.LifeIsFullOfInspiration.views.SettingsView.SettingsViewManager;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
@@ -88,6 +89,7 @@ public class MainMenuViewController {
 			/*
 			If the riddle view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (selectionViewManager != null) {
 				selectionViewManager.show();
 			}
@@ -119,6 +121,7 @@ public class MainMenuViewController {
 			/*
 			If the settings view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (settingsViewManager != null) {
 				settingsViewManager.show();
 			}
@@ -150,6 +153,7 @@ public class MainMenuViewController {
 			/*
 			If the credits view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (creditsViewManager != null) {
 				creditsViewManager.show();
 			}
@@ -181,6 +185,7 @@ public class MainMenuViewController {
 			/*
 			If the license view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (licenseViewManager != null) {
 				licenseViewManager.show();
 			}
@@ -205,6 +210,7 @@ public class MainMenuViewController {
 		quitButton.setOnAction((
 		    ActionEvent actionEvent
 		) -> {
+			SettingsViewController.buttonPress.play();
 			Platform.exit();
 		});
 	}

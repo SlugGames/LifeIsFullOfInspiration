@@ -72,15 +72,14 @@ public class LifeRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "It is considered precious by most in the world.",
-	    "It's the precursor to all natural rights.",
-	    "It's why mothers carry infants 9 months in the womb.",
-	    "It's what takes us from darkness and shows us the light."
-	};
+	public static final String LINES =
+	    "It is considered precious by most in the world.\n" +
+	    "It's the precursor to all natural rights.\n" +
+	    "It's why mothers carry infants 9 months in the womb.\n" +
+	    "It's what takes us from darkness and shows us the light.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

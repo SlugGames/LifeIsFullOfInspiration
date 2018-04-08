@@ -69,19 +69,18 @@ public class RomanceRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "At the start of every relationship,",
-	    "One must woo his or her desired partner.",
-	    "But nothing is more certain than this:",
-	    "The real relationship ends up being much harder.",
-	    "Still we cherish those moments,",
-	    "That first made us fall in love.",
-	    "Which is probably why weddings need dresses and dancing,",
-	    "Music and wine, cakes and doves."
-	};
+	public static final String LINES =
+	    "At the start of every relationship,\n" +
+	    "One must woo his or her desired partner.\n" +
+	    "But nothing is more certain than this:\n" +
+	    "The real relationship ends up being much harder.\n" +
+	    "Still we cherish those moments,\n" +
+	    "That first made us fall in love.\n" +
+	    "Which is probably why weddings need dresses and dancing,\n" +
+	    "Music and wine, cakes and doves.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

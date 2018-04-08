@@ -75,15 +75,14 @@ public class TreesRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "If it weren't for these, we couldn't breathe;",
-	    "Our air would lack enough oxygen.",
-	    "So next time you're out for a stroll in the park,",
-	    "You probably shouldn't go 'round choppin' 'em!"
-	};
+	public static final String LINES =
+	    "If it weren't for these, we couldn't breathe;\n" +
+	    "Our air would lack enough oxygen.\n" +
+	    "So next time you're out for a stroll in the park\n" +
+	    "You probably shouldn't go 'round choppin' 'em!";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

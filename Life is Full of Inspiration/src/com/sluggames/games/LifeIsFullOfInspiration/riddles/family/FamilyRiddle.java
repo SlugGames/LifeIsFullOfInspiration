@@ -90,23 +90,22 @@ public class FamilyRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "When all your mentors have long found new pupils",
-	    "When all your friends have long forgotten you,",
-	    "When all your neighbors have long moved away,",
-	    "When all your colleagues have long retired",
-	    "When all your shows have long been cancelled,",
-	    "When all your bands have long called it quits,",
-	    "When all your idols have long faded away",
-	    "When all your hobbies have long lost your interest,",
-	    "When all your age have long passed away,",
-	    "When your only body has long failed you,",
-	    "These are the people who will still be beside you,",
-	    "Without even needing a reason."
-	};
+	public static final String LINES =
+	    "When all your mentors have long found new pupils\n" +
+	    "When all your friends have long forgotten you,\n" +
+	    "When all your neighbors have long moved away,\n" +
+	    "When all your colleagues have long retired\n" +
+	    "When all your shows have long been cancelled,\n" +
+	    "When all your bands have long called it quits,\n" +
+	    "When all your idols have long faded away\n" +
+	    "When all your hobbies have long lost your interest,\n" +
+	    "When all your age have long passed away,\n" +
+	    "When your only body has long failed you\n" +
+	    "These are the people who will still be beside you,\n" +
+	    "Without even needing a reason.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

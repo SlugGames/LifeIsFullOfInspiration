@@ -78,17 +78,16 @@ public class FoodRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "Something so easy to take for granted,",
-	    "It can be fast, casual, or romantic.",
-	    "It can be had in individual servings,",
-	    "Or many people can learn to share things.",
-	    "If you go just a day without,",
-	    "You'll find your tummy will holler and shout."
-	};
+	public static final String LINES =
+	    "Something so easy to take for granted,\n" +
+	    "It can be fast, casual, or romantic.\n" +
+	    "It can be had in individual servings,\n" +
+	    "Or many people can learn to share things.\n" +
+	    "If you go just a day without,\n" +
+	    "You'll find your tummy will holler and shout.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

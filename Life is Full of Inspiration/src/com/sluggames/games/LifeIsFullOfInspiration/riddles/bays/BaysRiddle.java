@@ -75,15 +75,14 @@ public class BaysRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-		"They're not oceans, and they're not lakes.",
-		"They're not rivers, but they're not fake.",
-		"They're not harbors, and they're not quite seas.",
-		"But they're plenty wet, you better believe."
-	};
+	public static final String LINES =
+		"They're not oceans, and they're not lakes.\n" +
+		"They're not rivers, but they're not fake.\n" +
+		"They're not harbors, and they're not quite seas.\n" +
+		"But they're plenty wet, you better believe.";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

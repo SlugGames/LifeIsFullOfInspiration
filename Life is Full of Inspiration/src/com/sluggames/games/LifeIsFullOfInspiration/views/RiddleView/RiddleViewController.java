@@ -25,6 +25,7 @@ package com.sluggames.games.LifeIsFullOfInspiration.views.RiddleView;
 
 import com.sluggames.games.LifeIsFullOfInspiration.riddles.Riddle;
 import com.sluggames.games.LifeIsFullOfInspiration.views.SelectionView.SelectionViewManager;
+import com.sluggames.games.LifeIsFullOfInspiration.views.SettingsView.SettingsViewController;
 import java.time.Duration;
 import java.time.Instant;
 import javafx.animation.AnimationTimer;
@@ -56,6 +57,8 @@ public class RiddleViewController {
 	@FXML
 	private TextFlow riddleTextFlow;
 	@FXML
+	private Text riddleText;
+	@FXML
 	private ScrollPane riddleTextFlowScrollPane;
 
 	/*
@@ -74,10 +77,14 @@ public class RiddleViewController {
 			    riddle.testSolution(
 			    solveHereTextField.getText().toLowerCase()
 			)) {
+				SettingsViewController.correct.play();
+				SettingsViewController.greatGuess.play();
 				riddle.setSolved(true);
 				remainingNotificationDuration =
 				    PASS_NOTIFICATION_DURATION;
 			} else {
+				SettingsViewController.incorrect.play();
+				SettingsViewController.notQuite.play();
 				riddle.setSolved(false);
 				remainingNotificationDuration =
 				    FAIL_NOTIFICATION_DURATION;
@@ -125,6 +132,7 @@ public class RiddleViewController {
 			/*
 			If the selection view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (selectionViewManager != null) {
 				selectionViewManager.show();
 			}
@@ -282,7 +290,7 @@ public class RiddleViewController {
 		*/
 		solveHereTextField.clear();
 		riddleImageView.setImage(null);
-		riddleTextFlow.getChildren().clear();
+		riddleText.setText("");
 
 		/*
 		Check if there is a new riddle being set.
@@ -290,15 +298,13 @@ public class RiddleViewController {
 		if (riddle != null) {
 			fillPane.setOpacity(0);
 			riddleImageView.setOpacity(0);
+			remainingImageTransitionDuration =
+			    IMAGE_TRANSITION_DURATION;
 
 			/*
 			If so, populate the view with the corresponding data.
 			*/
-			for (String line : riddle.getLines()) {
-				riddleTextFlow.getChildren().add(
-				    new Text(line + "\n")
-				);
-			}
+			riddleText.setText(riddle.getText());
 
 			riddleImageView.setImage(
 			    riddle.getImage()

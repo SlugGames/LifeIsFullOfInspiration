@@ -71,15 +71,14 @@ public class RainbowsRiddle implements Riddle {
 		*** TEXT ***
 		************
 	*/
-	public static final String[] LINES = {
-	    "This is one of nature's most beautiful wonders,",
-	    "Especially when it follows wind, rain, and thunder.",
-	    "It comes from tiny droplets of water like bubbles,",
-	    "And if you're likely, you might even see a double!"
-	};
+	public static final String LINES =
+	    "This is one of nature's most beautiful wonders,\n" +
+	    "Especially when it follows wind, rain, and thunder.\n" +
+	    "It comes from tiny droplets of water like bubbles,\n" +
+	    "And if you're likely, you might even see a double!";
 
 	@Override
-	public String[] getLines() {
+	public String getText() {
 		return LINES;
 	}
 

@@ -24,6 +24,7 @@
 package com.sluggames.games.LifeIsFullOfInspiration.views.LicenseView;
 
 import com.sluggames.games.LifeIsFullOfInspiration.views.MainMenuView.MainMenuViewManager;
+import com.sluggames.games.LifeIsFullOfInspiration.views.SettingsView.SettingsViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -423,6 +424,7 @@ public class LicenseViewController {
 			/*
 			If the main menu view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (mainMenuViewManager != null) {
 				mainMenuViewManager.show();
 			}

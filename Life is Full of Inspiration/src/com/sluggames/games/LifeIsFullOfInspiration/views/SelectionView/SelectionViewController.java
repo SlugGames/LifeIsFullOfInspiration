@@ -42,15 +42,29 @@ import com.sluggames.games.LifeIsFullOfInspiration.riddles.trees.TreesRiddle;
 import com.sluggames.games.LifeIsFullOfInspiration.riddles.valleys.ValleysRiddle;
 import com.sluggames.games.LifeIsFullOfInspiration.views.MainMenuView.MainMenuViewManager;
 import com.sluggames.games.LifeIsFullOfInspiration.views.RiddleView.RiddleViewManager;
+import com.sluggames.games.LifeIsFullOfInspiration.views.SettingsView.SettingsViewController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Text;
 
 /**
  * @author david.boeger@sluggames.com
  */
 public class SelectionViewController {
+	/*
+		******************
+		*** TITLE TEXT ***
+		******************
+	*/
+	@FXML
+	private Text titleText;
+
 	/*
 		**********************
 		*** RIDDLE BUTTONS ***
@@ -114,6 +128,7 @@ public class SelectionViewController {
 			riddleButtons[index].setOnAction((
 			    ActionEvent actionEvent
 			) -> {
+				SettingsViewController.buttonPress.play();
 				if (riddleViewManager != null) {
 					riddleViewManager.getController().setRiddle(
 					    riddle
@@ -149,6 +164,7 @@ public class SelectionViewController {
 			/*
 			If the main menu view manager is set, show it.
 			*/
+			SettingsViewController.buttonPress.play();
 			if (mainMenuViewManager != null) {
 				mainMenuViewManager.show();
 			}
@@ -175,11 +191,17 @@ public class SelectionViewController {
 		resetProgressButton.setOnAction((
 		    ActionEvent actionEvent
 		) -> {
+			SettingsViewController.buttonPress.play();
+			resetProgressButton.setDisable(true);
+			titleText.setText("Select a Riddle");
 			for (int index = 0; index < 16; index++) {
 				riddles[index].setSolved(false);
-				riddleButtons[index].setTextFill(
-				    Color.BLACK
-				);
+				riddleButtons[index].setBackground(
+				    new Background(new BackgroundFill(
+				    Color.GRAY,
+				    CornerRadii.EMPTY,
+				    Insets.EMPTY
+				)));
 			}
 		});
 	}
@@ -187,17 +209,32 @@ public class SelectionViewController {
 	public void updateProgress() {
 		Riddle[] riddles = RIDDLES;
 		resetProgressButton.setDisable(true);
+		int solved = 0;
 		for (int index = 0; index < 16; index++) {
 			if (riddles[index].isSolved()) {
-				riddleButtons[index].setTextFill(
-				    Color.GREEN
-				);
+				solved++;
+				riddleButtons[index].setBackground(
+				    new Background(new BackgroundFill(
+				    Color.GREEN,
+				    CornerRadii.EMPTY,
+				    Insets.EMPTY
+				)));
 				resetProgressButton.setDisable(false);
 			} else {
-				riddleButtons[index].setTextFill(
-				    Color.BLACK
-				);
+				riddleButtons[index].setBackground(
+				    new Background(new BackgroundFill(
+				    Color.GRAY,
+				    CornerRadii.EMPTY,
+				    Insets.EMPTY
+				)));
 			}
+		}
+
+		if (solved == 16) {
+			SettingsViewController.thanksForPlaying.play();
+			titleText.setText("Thanks for Playing!");
+		} else {
+			titleText.setText("Select a Riddle");
 		}
 	}
 
