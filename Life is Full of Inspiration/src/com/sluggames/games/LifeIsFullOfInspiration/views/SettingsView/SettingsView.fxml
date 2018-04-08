@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<fx:root fitToHeight="true" fitToWidth="true" type="ScrollPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <content>
+      <GridPane alignment="CENTER" hgap="15.0" style="-fx-background-color: lightblue;" vgap="15.0">
+        <columnConstraints>
+          <ColumnConstraints />
+          <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="ALWAYS" />
+            <RowConstraints />
+            <RowConstraints />
+          <RowConstraints />
+          <RowConstraints />
+            <RowConstraints />
+            <RowConstraints vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Text text="Settings" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="David CLM Bold" size="48.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="fullScreenCheckBox" mnemonicParsing="false" text="Full Screen" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+            <Label fx:id="musicVolumeSliderLabel" text="Music Volume" GridPane.rowIndex="3" />
+            <Slider fx:id="musicVolumeSlider" blockIncrement="1.0" majorTickUnit="1.0" max="1.0" showTickLabels="true" showTickMarks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="soundEffectsVolumeSliderLabel" text="Sound Effects Volume" GridPane.rowIndex="4" />
+            <Slider fx:id="soundEffectsVolumeSlider" blockIncrement="1.0" majorTickUnit="1.0" max="1.0" showTickLabels="true" showTickMarks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="mainMenuButton" mnemonicParsing="false" text="Main Menu" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+         </children>
+         <padding>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </padding>
+      </GridPane>
+   </content>
+</fx:root>
